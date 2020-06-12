@@ -1,0 +1,63 @@
+@import url('"https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap')
+
+*{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.main-screen{
+background: #1D4350;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #A43931, #1D4350);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #A43931, #1D4350); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+height: 100vh;
+width: 100%;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+font-family: 'Roboto', sans-serif;
+}
+
+.main-wrapper{
+margin-top: 10px;
+margin-bottom: 10px;
+width: 400px;
+height: 635px;
+background: #8e9eab;  /* fallback for old browsers */
+background: -webkit-linear-gradient(left, #eef2f3, #8e9eab);
+background: -o-linear-gradient(left, #eef2f3, #8e9eab);
+background: linear-gradient(to right, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+border-radius: 15px;
+text-align: center;
+
+}
+
+.image-style{
+
+	height: 200px;
+	width: 200px;
+}
+
+.btn-style{
+background: #1D4350;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #A43931, #1D4350);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #A43931, #1D4350); 
+color:  #8e9eab;
+height: 40px;
+width: 100px;
+border-radius: 50px;
+}
+.modal-style {
+	text-align: center;
+    position: absolute;
+    top: 100px;
+    left: 400px;
+    right: 500px;
+    bottom: 100px;
+    border: 1px solid rgb(204, 204, 204);
+    background: rgb(255, 255, 255);
+    overflow: auto;
+    border-radius: 4px;
+    outline: none;
+   
+   
+}
