@@ -1,42 +1,88 @@
-import React,{useState} from 'react' ;
+import React,{Component} from 'react' ;
 import "./Avatar.css";
 import 'tachyons';
-import Modal from 'react-modal';
+import Avatarlist from './Avatarlist';
 
-const Avatar =() =>{
 
-	const[isActive,setActive]=useState(false)
+
+class Avatar extends Component{
 	
-	const openModal=() =>{
+	constructor(props){
+		super(props);
+		this.state ={
 
-		setActive({
-			isActive:true
+			name:"Welcome Ankit"
+		}
+	}
+
+Changeheading(){
+
+		this.setState({
+
+			name:"Ok done!!"
 		})
+	}
+	render(){
+
+	const array =[{
+
+		id:1,
+		name:"Ankit",
+		work:"Web Developer"
+
+
+	},
+
+	{
+
+		id:2,
+		name:"Anju",
+		work:"Home Maker"
+
+
+	}, 
+
+	{
+
+		id:3,
+		name:"AnandTyagi",
+		work:"Sales Manage"
+
+
+	},
+
+		{
+
+		id:4,
+		name:"Shweta",
+		work:"Software Developer"
+
 
 	}
- 
- return(<div className="main-screen">
- 		<div className="left-wrapper"></div>
- 		<div className="main-wrapper ">
- 			<div className="component">
- 				<img className="image-style " src="//joeschmoe.io/api/v1/jon" alt="image" />
- 				<h1>Ankit Tyagi</h1>
- 				<p>Web Developer</p>
- 				<button type="button" onClick={openModal} className="btn-style grow"> Click Me </button>
+
+
+
+	]
+
+	const newArray = array.map((y,iter)=>
+	{
+		return <Avatarlist id={array[iter].id}  name={array[iter].name}  work={array[iter].work}/>
+	})
+
+ 		return(<div className="main-screen">
+ 				<div className="left-wrapper"></div>
  				
- 				<Modal isOpen={isActive} className="modal-style">
+ 				<div className="main-wrapper ">
+ 					<div className="body-wrapper">
+ 					<h1>{this.state.name}</h1>
+ 					{newArray}
+ 					<button type="button" onClick={()=>this.Changeheading()} className="btn-style grow"> Click Me </button>
+ 					</div>
+ 				</div>
+ 				<div className="right-wrapper"></div>
+ 				</div>)
 
- 					<p>paragraph</p>
- 					<button type="button" onClick={openModal} className="btn-style grow"> Click Me </button>
- 				</Modal>
-
-
- 			</div>
- 		</div>
- 		<div className="right-wrapper"></div>
- 		</div>)
-
-
+ 		}
 }
 
 export default Avatar;

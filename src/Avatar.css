@@ -7,9 +7,10 @@
 }
 
 .main-screen{
-background: #1D4350;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #A43931, #1D4350);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #A43931, #1D4350); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: #f12711;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #f5af19, #f12711);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #f5af19, #f12711); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 height: 100vh;
 width: 100%;
 display: grid;
@@ -30,11 +31,13 @@ border-radius: 15px;
 text-align: center;
 
 }
-
+.heading{
+	font-size: 20px;
+}
 .image-style{
-
-	height: 200px;
-	width: 200px;
+	padding-top:50px;
+	height:50px;
+	width: 50px;
 }
 
 .btn-style{
@@ -58,6 +61,7 @@ border-radius: 50px;
     overflow: auto;
     border-radius: 4px;
     outline: none;
-   
+
    
 }
+
